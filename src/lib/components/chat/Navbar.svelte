@@ -137,7 +137,7 @@
 							on:click={async () => {
 								await showControls.set(!$showControls);
 							}}
-							aria-label="Controls 2"
+							aria-label="Controls"
 						>
 							<div class=" m-auto self-center">
 								<AdjustmentsHorizontal className=" size-5" strokeWidth="0.5" />
