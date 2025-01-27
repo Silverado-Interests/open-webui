@@ -6,7 +6,7 @@ from utils import init_config, NamespaceService
 
 app = cdk.App()
 
-stage = 'dev'
+stage = app.node.get_context("stage")
 config = init_config(stage=stage)
 
 env = cdk.Environment(
