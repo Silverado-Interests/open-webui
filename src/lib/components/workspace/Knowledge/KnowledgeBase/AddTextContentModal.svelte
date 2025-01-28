@@ -82,7 +82,7 @@
 				<div class="">
 					{#if voiceInput}
 						<div class=" max-w-full w-full">
-							<VoiceRecording
+							<!-- <VoiceRecording
 								bind:recording={voiceInput}
 								className="p-1"
 								on:cancel={() => {
@@ -94,7 +94,7 @@
 
 									voiceInput = false;
 								}}
-							/>
+							/> -->
 						</div>
 					{:else}
 						<Tooltip content={$i18n.t('Voice Input')}>
