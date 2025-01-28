@@ -134,16 +134,16 @@
 					<!-- </div> -->
 				<!-- </div> -->
 
-				<div class=" text-3xl sm:text-4xl line-clamp-1" in:fade={{ duration: 100 }}>
+				<!-- <div class=" text-3xl sm:text-4xl line-clamp-1" in:fade={{ duration: 100 }}>
 					{#if models[selectedModelIdx]?.name}
 						{models[selectedModelIdx]?.name}
 					{:else}
 						{$i18n.t('Hello, {{name}}', { name: $user.name })}
 					{/if}
-				</div>
+				</div> -->
 			</div>
 
-			<div class="flex mt-1 mb-2">
+			<!-- <div class="flex mt-1 mb-2">
 				<div in:fade={{ duration: 100, delay: 50 }}>
 					{#if models[selectedModelIdx]?.info?.meta?.description ?? null}
 						<Tooltip
@@ -180,7 +180,7 @@
 						{/if}
 					{/if}
 				</div>
-			</div>
+			</div> -->
 
 			<div
 				class="text-base font-normal xl:translate-x-6 md:max-w-3xl w-full py-3 {atSelectedModel

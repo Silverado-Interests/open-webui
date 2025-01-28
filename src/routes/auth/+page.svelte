@@ -120,14 +120,15 @@
 			onboarding = $config?.onboarding ?? false;
 		}
 		window.addEventListener("message", (event) => {
-			const { token } = event.data;
+			const { token, email } = event.data;
 			console.log(event.data);
 			const needsReload = !localStorage.token
 			if (token) {
 			    localStorage.setItem("token", token);
+				localStorage.setItem("email", email);
 			}
 			event.source.postMessage({ needsReload }, event.origin);
-    		});
+    	});
 	});
 </script>
 

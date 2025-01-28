@@ -37,8 +37,19 @@ jobs:
       - name: Install AWS CDK CLI
         run: npm install -g aws-cdk
       
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt --user
+        
       - name: Install AWS CDK CLI
         run: npm install
+      
+      - name: Build project
+        run: npm run build
 
       - name: Deploy
         run: cdk deploy -c stage=dev --all --require-approval never
