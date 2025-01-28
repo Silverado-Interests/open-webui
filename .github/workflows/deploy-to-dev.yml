@@ -37,6 +37,17 @@ jobs:
       - name: Install AWS CDK CLI
         run: npm install -g aws-cdk
       
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install uv package manager
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+
+      - name: Install dependencies
+        run: uv sync
+        
       - name: Install AWS CDK CLI
         run: npm install
 
