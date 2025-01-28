@@ -53,7 +53,7 @@
 		<div class="flex gap-0.5 justify-end w-full">
 			{#if voiceInput}
 				<div class="flex-1 w-full">
-					<VoiceRecording
+					<!-- <VoiceRecording
 						bind:recording={voiceInput}
 						className="p-1 w-full max-w-full"
 						on:cancel={() => {
@@ -75,7 +75,7 @@
 
 							voiceInput = false;
 						}}
-					/>
+					/> -->
 				</div>
 			{:else}
 				<Tooltip content={$i18n.t('Voice Input')}>
