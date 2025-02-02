@@ -29,7 +29,7 @@
 	import { Toaster, toast } from 'svelte-sonner';
 
 	import { getBackendConfig } from '$lib/apis';
-	import { getSessionUser, userSignIn } from '$lib/apis/auths';
+	import { getSessionUser } from '$lib/apis/auths';
 
 	import '../tailwind.css';
 	import '../app.css';
@@ -243,8 +243,7 @@
 
 				if (localStorage.token) {
 					// Get Session User Info
-					await userSignIn(localStorage.email, localStorage.email);
-					
+
 					const sessionUser = await getSessionUser(localStorage.token).catch((error) => {
 						toast.error(error);
 						return null;
