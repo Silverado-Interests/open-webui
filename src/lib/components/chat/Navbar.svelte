@@ -34,7 +34,7 @@
 	export let shareEnabled: boolean = false;
 
 	export let chat;
-	export let selectedModels;
+	export let selectedModels = ["anthropic/claude-3.5-haiku"];
 	export let showModelSelector = true;
 
 	let showShareChatModal = false;

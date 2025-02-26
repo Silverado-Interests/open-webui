@@ -27,7 +27,7 @@
 
 	// let chatId = $page.params.id;
 	let showModelSelector = false;
-	let selectedModels = [''];
+	export let selectedModels = ["anthropic/claude-3.5-haiku"];
 
 	let chat = null;
 	let user = null;
